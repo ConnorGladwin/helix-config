@@ -1,0 +1,60 @@
+theme = "dracula"
+
+[editor]
+line-number = "relative"
+mouse = false
+auto-format = true
+bufferline = "always"
+gutters = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"] 
+completion-replace = true
+true-color = true
+color-modes = true
+
+[editor.statusline]
+left = ["mode", "spacer", "separator", "spacer", "version-control", "spacer", "separator", "spacer", "spinner"]
+center = ["file-name","separator", "spacer","position-percentage"]
+right = ["workspace-diagnostics", "separator", "selections", "separator",  "position", "separator", "file-type", "separator", "total-line-numbers"]
+mode.normal = "Normal"
+mode.insert = "Insert"
+mode.select = "Select"
+
+[editor.lsp]
+display-messages = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+"'" = "'"
+'`' = '`'
+'<' = '>'
+
+[editor.indent-guides]
+render = true
+
+[editor.file-picker]
+
+[editor.soft-wrap]
+enable = true
+max-wrap = 25
+wrap-at-text-width = true
+
+[keys.select]
+q = "normal_mode"
+
+[keys.normal.space]
+w = [':format', ':w!']
+
+[keys.insert.q]
+q = "normal_mode"
+
+[keys.normal.tab]
+c = ":bc"
+right = ":bn"
+left = ":bp"
